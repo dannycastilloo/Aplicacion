@@ -2,6 +2,7 @@
 
 buildscript {
     ext.kotlin_version = "1.5.31"
+    ext.instana_version = '4.5.1'
     repositories {
         google()
         jcenter()

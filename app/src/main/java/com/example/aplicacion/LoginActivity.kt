@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.app.ActivityCompat
+import com.instana.android.core.InstanaConfig
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,13 @@ class LoginActivity : AppCompatActivity() {
 
         buttonInicio.setOnClickListener {
             val intent = Intent(this, PrimerMensajeActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonInstana = findViewById<Button>(R.id.buttonInstana)
+
+        buttonInstana.setOnClickListener {
+            val intent = Intent(this, InstanaActivity::class.java)
             startActivity(intent)
         }
     }
